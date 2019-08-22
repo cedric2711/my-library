@@ -48,17 +48,12 @@ export function handleUpdateChoice (response) {
       bid: response.bID,
       userbooks: response.usersBooks
     }
-    // dispatch(addBookChoice(book))
+    dispatch(addBookChoice(book))
 
     return saveBookChoice(book)
-      .then((response) => {
-        const {users, books} = response;
-        dispatch(receiveUsers(users));
-        dispatch(receiveBooks(books));
-      })
       .catch((e) => {
         console.warn("Error in handleUpdateChoice: ", e)
-        // dispatch(addBookChoice(book))
+        dispatch(addBookChoice(book))
         alert("The was an error in updating a book. Try again.")
       })
   }
