@@ -15,6 +15,7 @@ body, .app {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #60ac5d;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

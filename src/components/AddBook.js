@@ -42,7 +42,6 @@ class AddBook extends Component {
                         <div className="library-control-group">
                             <label htmlFor="author">Author</label>
                             <input id="author" type="text" placeholder="Author" required/>
-                            <span className="library-form-message-inline">This is a required field.</span>
                         </div>
 
                         <div className="library-control-group">
