@@ -1,9 +1,15 @@
 // libraries
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import Book from './Book';
 
 class Library extends Component {
+    state = {
+        filteredBookKeys: [],
+        query: ""
+    }
+
     extractBookType = (bID) => {
         const {users, authedUser} = this.props;
         const {books} = users[authedUser];
@@ -17,11 +23,29 @@ class Library extends Component {
         return "none";
     }
 
+    updateQuery = (value) => {
+        const {books, bookKeys} = this.props;
+        const filteredBookKeys = bookKeys.filter((bID) => {
+            const book = books[bID];
+            if (book["author"].toLowerCase().includes(value.toLowerCase()) || book["title"].toLowerCase().includes(value.toLowerCase())) {
+                return bID;
+            }
+            return false;
+        })
+        this.setState({
+            query:value,
+            filteredBookKeys
+        });
+    }
+
     render () {
         const {books, users, authedUser, bookKeys} = this.props;
+        const { query, filteredBookKeys } = this.state
+
+        const booksToShow = query.length ? filteredBookKeys : bookKeys;
         return (
             <div className="search-books">
-            {/* <div className="search-books-bar">
+            <div className="search-books-bar">
                 <Link
                     className="close-search"
                     to='/'>
@@ -36,14 +60,14 @@ class Library extends Component {
                         />
 
                 </div>
-            </div> */}
+            </div>
             <div className="search-books-results">
-                {(!books)?
+                {(!booksToShow.length)?
                     <div>The Books is not available </div>
                     :
                     <ol className="books-grid">
                     {
-                        bookKeys.map((bID) => {
+                        booksToShow.map((bID) => {
                             const book = books[bID];
                             let bookType = "none";
                             if (book.users.includes(authedUser)) {
