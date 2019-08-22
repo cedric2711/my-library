@@ -23,7 +23,10 @@
     "pages": 784,
     "title": "Fairy tales",
     "year": 1836,
-    "users": []
+    "users": [
+      "Lyssandra",
+      "johndoe"
+    ]
   },
   "m58ytqw3tvg68k7vtnrumf": {
     "id": "m58ytqw3tvg68k7vtnrumf",
@@ -49,7 +52,10 @@
     "pages": 160,
     "title": "The Epic Of Gilgamesh",
     "year": -1700,
-    "users": []
+    "users": [
+      "Lyssandra",
+      "cedric"
+    ]
   },
   "htmkwpv5eej4ymx9mjq0s": {
     "id": "htmkwpv5eej4ymx9mjq0s",
@@ -62,7 +68,11 @@
     "pages": 176,
     "title": "The Book Of Job",
     "year": -600,
-    "users": []
+    "users": [
+      "Lyssandra",
+      "cedric",
+      "johndoe"
+    ]
   },
   "ngufbw3pqxba7dq7vwat9": {
     "id": "ngufbw3pqxba7dq7vwat9",
@@ -75,7 +85,9 @@
     "pages": 288,
     "title": "One Thousand and One Nights",
     "year": 1200,
-    "users": []
+    "users": [
+      "cedric"
+    ]
   },
   "lt0gymdh21u9v0pc9m9": {
     "id": "lt0gymdh21u9v0pc9m9",
@@ -114,7 +126,9 @@
     "pages": 443,
     "title": "Le Père Goriot",
     "year": 1835,
-    "users": []
+    "users": [
+      "cedric"
+    ]
   },
   "amhuga1lpt6j58oo82thz": {
     "id": "amhuga1lpt6j58oo82thz",
@@ -140,7 +154,10 @@
     "pages": 1024,
     "title": "The Decameron",
     "year": 1351,
-    "users": []
+    "users": [
+      "Lyssandra",
+      "cedric"
+    ]
   },
   "x5ph01371br032pw93p7ws2": {
     "id": "x5ph01371br032pw93p7ws2",
@@ -153,7 +170,9 @@
     "pages": 224,
     "title": "Ficciones",
     "year": 1965,
-    "users": []
+    "users": [
+      "cedric"
+    ]
   },
   "a1mg4ognfwbg4440eehbdc": {
     "id": "a1mg4ognfwbg4440eehbdc",
@@ -166,7 +185,9 @@
     "pages": 342,
     "title": "Wuthering Heights",
     "year": 1847,
-    "users": []
+    "users": [
+      "Lyssandra"
+    ]
   },
   "jckq5glwenjkllpayf3a5c": {
     "id": "jckq5glwenjkllpayf3a5c",
@@ -179,7 +200,9 @@
     "pages": 185,
     "title": "The Stranger",
     "year": 1942,
-    "users": []
+    "users": [
+      "johndoe"
+    ]
   },
   "1d4f0nscemllslg2ekaboi": {
     "id": "1d4f0nscemllslg2ekaboi",
@@ -257,7 +280,9 @@
     "pages": 320,
     "title": "Nostromo",
     "year": 1904,
-    "users": []
+    "users": [
+      "Lyssandra"
+    ]
   },
   "5vlxqanpykxnwpczcvras": {
     "id": "5vlxqanpykxnwpczcvras",
@@ -283,7 +308,9 @@
     "pages": 596,
     "title": "Jacques the Fatalist",
     "year": 1796,
-    "users": []
+    "users": [
+      "johndoe"
+    ]
   },
   "zlyjfc5dj4sg4pdieuji9": {
     "id": "zlyjfc5dj4sg4pdieuji9",

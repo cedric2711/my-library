@@ -1,0 +1,57 @@
+{
+    "Lyssandra": {
+      "id": "Lyssandra",
+      "name": "Lyssandra Anna",
+      "avatarURL": "https://tylermcginnis.com/would-you-rather/sarah.jpg",
+      "books": {
+        "currentlyReading": [
+          "igfov3mmhvpvysnt6zmps",
+          "mfgxz3c5jhgx2rdys5aan",
+          "lm9z3dvwv9mym9aiuqse"
+        ],
+        "wantToRead": [
+          "htmkwpv5eej4ymx9mjq0s",
+          "a1mg4ognfwbg4440eehbdc"
+        ],
+        "read": [
+          "bqhvja1vycgm1qzw0nms3"
+        ]
+      }
+    },
+    "cedric": {
+      "id": "cedric",
+      "name": "Cedric Mascarenhas",
+      "avatarURL": "https://tylermcginnis.com/would-you-rather/tyler.jpg",
+      "books": {
+        "currentlyReading": [
+          "htmkwpv5eej4ymx9mjq0s",
+          "x5ph01371br032pw93p7ws2",
+          "ryownbgznf703u519jqa6"
+        ],
+        "wantToRead": [
+          "ngufbw3pqxba7dq7vwat9"
+        ],
+        "read": [
+          "igfov3mmhvpvysnt6zmps",
+          "mfgxz3c5jhgx2rdys5aan"
+        ]
+      }
+    },
+    "johndoe": {
+      "id": "johndoe",
+      "name": "John Doe",
+      "avatarURL": "https://tylermcginnis.com/would-you-rather/dan.jpg",
+      "books": {
+        "currentlyReading": [
+          "jckq5glwenjkllpayf3a5c"
+        ],
+        "wantToRead": [
+          "htmkwpv5eej4ymx9mjq0s",
+          "bqhvja1vycgm1qzw0nms3"
+        ],
+        "read": [
+          "nx28q2hacbhwnxbmaiu6lo"
+        ]
+      }
+    }
+  }

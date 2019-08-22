@@ -7,13 +7,14 @@ export const ADD_BOOK = "ADD_BOOK"
 export const UPDATE_BOOK = "UPDATE_BOOK"
 
 function addBook (book) {
+  debugger;
   return {
     type: ADD_BOOK,
     book,
   }
 }
 
-export function handleAddBook (author, country, imageLink, language, link, pages, title, year) {
+export function handleAddBook ({author, country, imageLink, language, link, pages, title, year}) {
   return (dispatch, getState) => {
 
     dispatch(showLoading())
@@ -27,8 +28,9 @@ export function handleAddBook (author, country, imageLink, language, link, pages
       pages,
       title,
       year
-    })
-      .then((book) => dispatch(addBook(book)))
+    }).then((book) => {
+        dispatch(addBook(book))
+      })
       .then(() => dispatch(hideLoading()))
   }
 }
