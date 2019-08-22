@@ -12,11 +12,11 @@ class Book extends Component {
         const {users, authedUser, bookType, book, dispatch} = this.props;
         const newChoice = e.target.value;
         let usersBooks = users[authedUser].books;
-        if(bookType!=="none") {
+        if(bookType && bookType!=="none") {
             usersBooks[bookType]= usersBooks[bookType].filter((bID) => (bID!==book.id));
         }
 
-        if(newChoice!=="none") {
+        if(newChoice && newChoice!=="none") {
             usersBooks[newChoice]= usersBooks[newChoice].concat([book.id]);
         }
         dispatch(handleUpdateChoice({
