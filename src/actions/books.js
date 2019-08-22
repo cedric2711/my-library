@@ -1,9 +1,10 @@
-import { saveBookChoice, saveBook } from '../utils/api'
-import { showLoading, hideLoading } from 'react-redux-loading'
+import { saveBookChoice, saveBook } from "../utils/api";
+import { showLoading, hideLoading } from "react-redux-loading";
+import { receiveUsers} from "./users";
 
-export const RECEIVE_BOOKS = 'RECEIVE_BOOKS'
-export const ADD_BOOK = 'ADD_BOOK'
-export const UPDATE_BOOK = 'UPDATE_BOOK'
+export const RECEIVE_BOOKS = "RECEIVE_BOOKS"
+export const ADD_BOOK = "ADD_BOOK"
+export const UPDATE_BOOK = "UPDATE_BOOK"
 
 function addBook (book) {
   return {
@@ -44,16 +45,21 @@ export function handleUpdateChoice (response) {
     const { authedUser } = getState()
     var book={
       authedUser,
-      bid: response.id,
-      choice: response.choice
+      bid: response.bID,
+      userbooks: response.usersBooks
     }
-    dispatch(addBookChoice(book))
+    // dispatch(addBookChoice(book))
 
     return saveBookChoice(book)
+      .then((response) => {
+        const {users, books} = response;
+        dispatch(receiveUsers(users));
+        dispatch(receiveBooks(books));
+      })
       .catch((e) => {
-        console.warn('Error in handleUpdateChoice: ', e)
-        dispatch(addBookChoice(book))
-        alert('The was an error in updating a book. Try again.')
+        console.warn("Error in handleUpdateChoice: ", e)
+        // dispatch(addBookChoice(book))
+        alert("The was an error in updating a book. Try again.")
       })
   }
 }

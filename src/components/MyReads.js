@@ -1,15 +1,16 @@
 // libraries
-import React, {Component} from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
+import ListBooks from './ListBooks';
 
-class MyReads extends Component {
-    render () {
+function MyReads () {
         return (
-            <div>Need to display books i'm interested in.</div>
+            <div>
+                <ListBooks bookType="currentlyReading" />
+                <ListBooks bookType="wantToRead" />
+                <ListBooks bookType="read" />
+            </div>
         );
-    }
 }
 
-const mapStateToProps = ({books, myReads, authedUser}) => ({books, myReads, authedUser})
-
-export default connect(mapStateToProps)(MyReads)
+export default connect()(MyReads)

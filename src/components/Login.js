@@ -34,7 +34,7 @@ class Login extends Component {
   
   render() {
     const {users, authedUser}= this.props
-    const {userChosen, goToHome }= this.state
+    const {userChosen, goToHome, userName }= this.state
     if(authedUser!==null || goToHome){
       let {referrer} = this.props.location.state ? this.props.location.state : "/";
       return <Redirect to={referrer} />
@@ -52,10 +52,11 @@ class Login extends Component {
               placeholder="What's happening?"
               onChange={this.handleChange}
               className=''
+              value={userName===""?"none":userName}
             >
-              <option disabled selected>-- select an user --</option>
+              <option disabled value="none">-- select an user --</option>
               {users.map((user) => {
-                return <option value = {user.id}>{user.name}</option>
+                return <option key={user.id} value = {user.id}>{user.name}</option>
               })}
             </select>
 

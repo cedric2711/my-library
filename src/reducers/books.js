@@ -17,7 +17,7 @@ export default function books (state = {}, action) {
         ...state,
         [action.book.bid]:{
           ...state[action.book.bid],
-          users: state[action.book.bid].users.concat([action.book.authedUser])  
+          users: [...new Set(state[action.book.bid].users.concat([action.book.authedUser]))]  
         }
       }
     default :

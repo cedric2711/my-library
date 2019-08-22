@@ -12,8 +12,8 @@ export default function users (state = {}, action) {
       return {
         ...state,
         [action.book.authedUser]:{
-          ...state[action.book.authedUser].books,
-          [action.book.choice]: state[action.book.authedUser].books[action.book.choice].concat([action.book.bid])
+          ...state[action.book.authedUser],
+          books: action.book.userbooks
         }
       }
     default :

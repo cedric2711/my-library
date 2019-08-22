@@ -3,6 +3,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Route, Switch, BrowserRouter} from 'react-router-dom'
 
+// CSS
+import './App.css'
+
 // Components
 import PrivateRoute from "./PrivateRoute";
 import Nav from "./Nav";
@@ -19,7 +22,7 @@ class App extends React.Component {
 
     /**
      * @description Lifecycle events just called after component is inserted into DOM. We will fetch initial data here which we 
-     * need for the application like users and questions.
+     * need for the application like users and books.
      */
     componentDidMount() {
         const {dispatch} = this.props

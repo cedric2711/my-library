@@ -1,4 +1,4 @@
-import rawBooks from "../data/books.json";
+import booksData from "../data/books.json";
 
 let users = {
   sarahedo: {
@@ -6,9 +6,9 @@ let users = {
     name: 'Sarah Edo',
     avatarURL: "https://tylermcginnis.com/would-you-rather/sarah.jpg",
     books: {
-      currentlyReading:[],
-      wantToRead: [],
-      read:[]
+      currentlyReading:["nx28q2hacbhwnxbmaiu6lo", "si9ibfr2cp58zih5a5zps", "60bhycw3j5da2r33o4jhq"],
+      wantToRead: ["hhu4wpfzdysdq01m0xxtis", "uit6ngrlk2kjvh7mysbmd"],
+      read:["iigpcw401xr5kngj3ijxmw", "33xw1cgug71f8xeb1a3dlv", "svvptwogslrqchpsofwhmq", "nx66j67f1rkmr4nqjiu2p"]
     }
   },
   tylermcginnis: {
@@ -33,17 +33,7 @@ let users = {
   }
 }
 
-
-let books={};
-function generateBooks () {
-  for (let i=0 ; i< rawBooks.length; i++) {
-    let book = formatBook(rawBooks[i]);
-    books[book.id] = book;
-  }
-}
-
-generateBooks();
-
+let books = booksData
 function generateUID () {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 }
@@ -91,17 +81,14 @@ export function _saveBook (book) {
   })
 }
 
-export function _saveBookChoice ({ authedUser, bid, choice }) {
+export function _saveBookChoice ({ authedUser, bid, userbooks }) {
   return new Promise((res, rej) => {
     setTimeout(() => {
       users = {
         ...users,
         [authedUser]: {
           ...users[authedUser],
-          books: {
-            ...users[authedUser].books,
-            [choice]: users[authedUser].books[choice].concat([bid])
-          }
+          books: userbooks
         }
       }
 
@@ -109,10 +96,10 @@ export function _saveBookChoice ({ authedUser, bid, choice }) {
         ...books,
         [bid]: {
           ...books[bid],
-          users: books[bid].users.concat([authedUser])
+          users: [...new Set(books[bid].users.concat([authedUser]))]
         }
       }
-      res()
+      res({books, users})
     }, 500)
   })
 }
