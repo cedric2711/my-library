@@ -1,7 +1,7 @@
 // libraries
-import React from 'react'
-import { connect } from 'react-redux'
-import Book from './Book';
+import React from "react";
+import { connect } from "react-redux";
+import Book from "./Book";
 
 function ListBooks({ bookType, booksToDisplay }) {
     let sectionTitle = {

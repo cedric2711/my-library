@@ -1,7 +1,9 @@
 // libraries
-import React from 'react'
-import {connect} from 'react-redux'
-import ListBooks from './ListBooks';
+import React from "react";
+import {connect} from "react-redux";
+
+// Components
+import ListBooks from "./ListBooks";
 
 function MyReads () {
         return (

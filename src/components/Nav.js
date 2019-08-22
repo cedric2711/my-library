@@ -1,9 +1,8 @@
-import React, {Component} from 'react'
-import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
-import { setAuthedUser } from '../actions/authedUser'
+import React, {Component} from "react";
+import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+import { setAuthedUser } from "../actions/authedUser";
 
-//export default function Nav () {
 class Nav extends Component {
   logoutUser = (e) => {
     const {dispatch} = this.props
@@ -13,21 +12,21 @@ class Nav extends Component {
     return (
       <div className="header">
         <h1>Read On</h1>
-        <nav className='nav'>
+        <nav className="nav">
           <div className="leftNav">
             <ul>
               <li>
-                <NavLink to='/' exact activeClassName='active'>
+                <NavLink to="/" exact activeClassName="active">
                   My Reads
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/library' activeClassName='active'>
+                <NavLink to="/library" activeClassName="active">
                   Library
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/add' activeClassName='active'>
+                <NavLink to="/add" activeClassName="active">
                   Add Book
                 </NavLink>
               </li>
@@ -41,7 +40,7 @@ class Nav extends Component {
               <li>
                 {
                   this.props.loading?
-                    <NavLink to='/login' activeClassName='active'>
+                    <NavLink to="/login" activeClassName="active">
                       Log in
                     </NavLink>
                     :<div onClick={this.logoutUser}>Logout</div>

@@ -1,6 +1,6 @@
-import React from 'react'
-import {Route, Redirect, withRouter} from 'react-router-dom'
-import {connect} from 'react-redux'
+import React from "react";
+import {Route, Redirect, withRouter} from "react-router-dom";
+import {connect} from "react-redux";
 
 const PrivateRoute = ({ component: Component, authedUser, ...rest }) => (
   <Route {...rest} render={(props) => (
@@ -9,7 +9,7 @@ const PrivateRoute = ({ component: Component, authedUser, ...rest }) => (
     // directly then we will open leaderboard after login.
     authedUser !== null
       ? <Component {...props} />
-      : <Redirect to={{pathname: '/login', state: { referrer: props.location }}} />
+      : <Redirect to={{pathname: "/login", state: { referrer: props.location }}} />
   )} />
 )
 

@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { setAuthedUser } from '../actions/authedUser'
-import { Redirect } from 'react-router-dom'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { setAuthedUser } from "../actions/authedUser";
+import { Redirect } from "react-router-dom";
 
 class Login extends Component {
   state = {
     userChosen: false,
-    userName: '',
+    userName: "",
     goToHome:false
   }
   closeModal = () =>{
@@ -46,12 +46,12 @@ class Login extends Component {
     return (
       <div className="loginBlock">
         <div>
-          <h3 className='center'>Sign in to access your Library</h3>
-          <form className='loggin-window' onSubmit={this.handleSubmit}>
+          <h3 className="center">Sign in to access your Library</h3>
+          <form className="loggin-window" onSubmit={this.handleSubmit}>
             <select
               placeholder="What's happening?"
               onChange={this.handleChange}
-              className=''
+              className=""
               value={userName===""?"none":userName}
             >
               <option disabled value="none">-- select an user --</option>
@@ -61,8 +61,8 @@ class Login extends Component {
             </select>
 
             <button
-              className='btn'
-              type='submit'
+              className="btn"
+              type="submit"
               disabled={!userChosen}>
                 Submit
             </button>

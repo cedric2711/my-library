@@ -1,8 +1,8 @@
 // libraries
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import Book from './Book';
+import React, {Component} from "react";
+import {connect} from "react-redux";
+import {Link} from "react-router-dom";
+import Book from "./Book";
 
 class Library extends Component {
     state = {
@@ -39,7 +39,7 @@ class Library extends Component {
     }
 
     render () {
-        const {books, users, authedUser, bookKeys} = this.props;
+        const {books, authedUser, bookKeys} = this.props;
         const { query, filteredBookKeys } = this.state
 
         const booksToShow = query.length ? filteredBookKeys : bookKeys;
@@ -48,7 +48,7 @@ class Library extends Component {
             <div className="search-books-bar">
                 <Link
                     className="close-search"
-                    to='/'>
+                    to="/">
                     Close
                 </Link>
                 <div className="search-books-input-wrapper">

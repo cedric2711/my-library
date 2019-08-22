@@ -1,22 +1,22 @@
 // libraries
-import React from 'react'
-import {connect} from 'react-redux'
-import {Route, Switch, BrowserRouter} from 'react-router-dom'
+import React from "react";
+import {connect} from "react-redux";
+import {Route, Switch, BrowserRouter} from "react-router-dom";
 
 // CSS
-import './App.css'
+import "./App.css"
 
 // Components
 import PrivateRoute from "./PrivateRoute";
 import Nav from "./Nav";
 import MyReads from "./MyReads";
 import Login from "./Login";
-import Library from './Library';
-import AddBook from './AddBook';
-import ErrorPage from './ErrorPage';
+import Library from "./Library";
+import AddBook from "./AddBook";
+import ErrorPage from "./ErrorPage";
 
 // Methods
-import { handleInitialData } from '../actions/shared'
+import { handleInitialData } from "../actions/shared"
 
 class App extends React.Component {
 
@@ -35,12 +35,12 @@ class App extends React.Component {
                 <div>
                     {/** Navigation component to make sure we will display Navigation Bar always*/}
                     <Nav/>
-                    {/** Let's render different components based on the path.*/}
+                    {/** Let"s render different components based on the path.*/}
                     <Switch>
-                        <Route exact path='/login' component={Login}/>
-                        <PrivateRoute exact path='/' component={MyReads}/>
-                        <PrivateRoute exact path='/library' component={Library}/>
-                        <PrivateRoute exact path='/add' component={AddBook}/>
+                        <Route exact path="/login" component={Login}/>
+                        <PrivateRoute exact path="/" component={MyReads}/>
+                        <PrivateRoute exact path="/library" component={Library}/>
+                        <PrivateRoute exact path="/add" component={AddBook}/>
                         <PrivateRoute component={ErrorPage}/>
                     </Switch>
                 </div>

@@ -1,6 +1,5 @@
 import { saveBookChoice, saveBook } from "../utils/api";
 import { showLoading, hideLoading } from "react-redux-loading";
-import { receiveUsers} from "./users";
 
 export const RECEIVE_BOOKS = "RECEIVE_BOOKS"
 export const ADD_BOOK = "ADD_BOOK"

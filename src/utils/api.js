@@ -3,7 +3,7 @@ import {
   _saveBook,
   _saveBookChoice,
   _getBooks
-} from './_DATA.js'
+} from "./_DATA.js"
 
 export function getInitialData () {
   return Promise.all([

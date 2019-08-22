@@ -1,4 +1,4 @@
-import { RECEIVE_BOOKS, ADD_BOOK, UPDATE_BOOK} from '../actions/books'
+import { RECEIVE_BOOKS, ADD_BOOK, UPDATE_BOOK} from "../actions/books";
 
 export default function books (state = {}, action) {
   switch(action.type) {
