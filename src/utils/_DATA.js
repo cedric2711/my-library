@@ -38,17 +38,14 @@ function formatBook ({ author, country, imageLink, language, link, pages, title,
 
 export function _saveBook (book) {
   return new Promise((res, rej) => {
-    const formattedBook = formatBook(book)
-    debugger;
-    // setTimeout(() => {
-      debugger;
+    const formattedBook = formatBook(book);
+    setTimeout(() => {
       books = {
         ...books,
         [formattedBook.id]: formattedBook
-      }
-      debugger;
+      }  
       res(formattedBook)
-    // }, 1000);
+    }, 1000);
   })
 }
 

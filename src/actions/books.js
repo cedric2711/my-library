@@ -7,7 +7,6 @@ export const ADD_BOOK = "ADD_BOOK"
 export const UPDATE_BOOK = "UPDATE_BOOK"
 
 function addBook (book) {
-  debugger;
   return {
     type: ADD_BOOK,
     book,

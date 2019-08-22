@@ -8,7 +8,6 @@ import {handleUpdateChoice} from "../actions/books";
 class Book extends Component {
 
     handleChange = (e) => {
-        debugger;
         const {users, authedUser, bookType, book, dispatch} = this.props;
         const newChoice = e.target.value;
         let usersBooks = users[authedUser].books;
