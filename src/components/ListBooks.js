@@ -14,8 +14,10 @@ function ListBooks({ bookType, booksToDisplay }) {
             <h2 className="bookshelf-title">{sectionTitle[bookType]}</h2>
             <div className="bookshelf-books">
                 <ol className="books-grid">
-                    {
+                    {  (booksToDisplay.length)?
                         booksToDisplay.map((book) => (<Book key={book.id} bookID={book.id} bookType={bookType} />))
+                        :
+                        <div>There are no books in this section.</div>
                     }
                 </ol>
             </div>
