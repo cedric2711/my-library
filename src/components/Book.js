@@ -27,13 +27,18 @@ class Book extends Component {
 
     render () {
         const {book, bookType} = this.props;
+        let imgSrc = "";
+        try {
+            imgSrc = require(`../icons/${book.imageLink}`);
+        }catch(e){}
+        
 
         return (
             <li key={book.id}>
                 <div className="book">
                     <div className="book-top">
 
-                        <img className={"book-cover"+((book.imageLink)?" default-book-cover":"")} style={{ width: 128, height: 193}}  src={require(`../icons/${book.imageLink}`)}/>
+                        <img className={"book-cover"+((book.imageLink)?" default-book-cover":"")} style={{ width: 128, height: 193}}  src={imgSrc}/>
                         <div className="book-shelf-changer">
                         <select value={bookType===undefined? "none" : bookType} onChange={(e)=>this.handleChange(e)}>
                             <option value="move" disabled>Move to...</option>

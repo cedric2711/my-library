@@ -24,7 +24,9 @@ class AddBook extends Component {
             year: form.year.value
         }
         dispatch(handleAddBook(formData));
+        this.props.history.push("/");
     }
+
     getYear = () => {
         let year=[];
         for (let i=2019; i>=1900; i--) {
@@ -32,6 +34,7 @@ class AddBook extends Component {
         }
         return year;
     }
+    
     render () {
         const year= this.getYear();
         return (
