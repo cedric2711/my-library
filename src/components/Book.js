@@ -33,7 +33,7 @@ class Book extends Component {
                 <div className="book">
                     <div className="book-top">
 
-                        <div className={"book-cover"+((book.imageLink)?" default-book-cover":"")} style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLink})`}}></div>
+                        <img className={"book-cover"+((book.imageLink)?" default-book-cover":"")} style={{ width: 128, height: 193}}  src={require(`../icons/${book.imageLink}`)}/>
                         <div className="book-shelf-changer">
                         <select value={bookType===undefined? "none" : bookType} onChange={(e)=>this.handleChange(e)}>
                             <option value="move" disabled>Move to...</option>
